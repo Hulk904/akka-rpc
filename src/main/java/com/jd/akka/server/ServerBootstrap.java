@@ -13,6 +13,6 @@ public class ServerBootstrap {
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("sys", ConfigFactory.load("application.conf"));
-        ActorRef actorRef = system.actorOf(Props.create(ServerActor.class), "rmtActor");
+        //ActorRef actorRef = system.actorOf(Props.create(ServerActor.class), "remoteActor");
     }
 }
