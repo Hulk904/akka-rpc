@@ -18,10 +18,12 @@ import java.util.Map;
 public class ServerActor  extends UntypedActor {
 
 
+
     @Override
     public void onReceive(Object o) throws Exception{
         if(o instanceof Request){
             getSender().tell(handle((Request)o), getSelf());
+            System.out.println(getSelf());
         }
         if(o instanceof String){
             System.out.println(o);
